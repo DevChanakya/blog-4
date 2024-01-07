@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="banner-section-bg-container">
+      <nav class="bg-transparent">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                        Icon when menu is closed.
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+                        Icon when menu is open.
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company"
+                />
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover-bg-gray-700 hover-text-white" -->
+                  <a
+                    href="#"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="#sectionhome"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Blogs</a
+                  >
+                  <a
+                    href="#sectionFAQ"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >FAQs</a
+                  >
+                  <a
+                    href="#followUsSection"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Follow Us</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <button
+                type="button"
+                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover-text-white focus:outline-none focus-ring-2 focus-ring-white focus-ring-offset-2 focus-ring-offset-gray-800"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover-bg-gray-700 hover-text-white" -->
+            <a
+              href="#"
+              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              href="#sectionhome"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Blogs</a
+            >
+            <a
+              href="#sectionFAQ"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >FAQs</a
+            >
+            <a
+              href="#followUsSection"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Follow Us</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex justify-center items-center h-screen">
+        <div class="contentCont text-center">
+          <h1 class="text-4xl font-bold mt-100">
+            We're a finance and consulting company based in Manhattan, New York.
+          </h1>
+          <p class="text-xl mb-4 mt-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar
+          </p>
+        </div>
+      </div>
+      <hr class="lineProp m-5" />
+      <div class="wcu-section py-5" id="sectionhome">
+        <div class="container mx-auto">
+          <div class="text-center">
+            <h1 class="text-3xl font-bold text-left ml-5">Blogs</h1>
+            <p class="text-xl text-left ml-5 mt-2">
+              Best Financial Blogs in India for Better Finance and Money
+              Management in 2023
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center m-5">
+            <div class="wcu-card p-3 mb-3 text-left">
+              <h1 class="text-2xl font-bold mt-3">MoneyTap</h1>
+              <p class="paraProp mt-3 mb-4">
+                MoneyTap, essentially is a fintech lending company that offers
+                quick personal loans in India. Shiv Nanda, a financial analyst,
+                writes blogs for MoneyTap where he helps people understand the
+                basics of financial planning, shares tips on money-saving, and
+                offers ideas to break bad money habits to help you get on a path
+                of financial success. MoneyTap, essentially is a fintech lending
+                company that offers quick personal loans in India. Shiv Nanda, a
+                financial analyst, writes blogs for MoneyTap where he helps
+                people understand the basics of financial planning, shares tips
+                on money-saving, and offers ideas to break bad money habits to
+                help you get on a path of financial success.
+              </p>
+              <a
+                href="moneyTap.html"
+                target="_self"
+                class="text-blue-500 font-medium hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </div>
+            <div class="wcu-card p-3 mb-3 text-left">
+              <h1 class="text-2xl font-bold mt-3">Money Excel</h1>
+              <p class="paraProp mb-4">
+                Through Money Excel, Shitanshu educates Indian consumers on the
+                importance of financial planning and helps them excel in
+                managing various financial products that involve personal
+                finan1MoneyTap, essentially is a fintech lending company that
+                offers quick personal loans in India. Shiv Nanda, a financial
+                analyst, writes blogs for MoneyTap where he helps people
+                understand the basics of financial planning, shares tips on
+                money-saving, and offers ideas to break bad money habits to help
+                you get on a path of financial success.
+              </p>
+              <a
+                href="MoneyExcel.html"
+                target="_self"
+                class="text-blue-500 font-medium hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </div>
+            <div class="wcu-card p-3 mb-3 text-left">
+              <h1 class="text-2xl font-bold mt-3">Basunivesh</h1>
+              <p class="paraProp mb-4">
+                Basavaraj Tonagatti manages Basunivesh, one of the best
+                financial blogs in India. The blogs cover various topics on the
+                basic problems people face in today’s financial world about
+                insurance, investment, tax planning and more.MoneyTap,
+                essentially is a fintech lending company that offers quick
+                personal loans in India. Shiv Nanda, a financial analyst, writes
+                blogs for MoneyTap where he helps people understand the basics
+                of financial planning, shares tips on money-saving, and offers
+                ideas to break bad money habits to help you get on a path of
+                financial success.
+              </p>
+              <a
+                href="Basunivesh.html"
+                target="_self"
+                class="text-blue-500 font-medium hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </div>
+            <div class="wcu-card p-3 mb-3 text-left">
+              <h1 class="text-2xl font-bold mt-3">Money Gyaan</h1>
+              <p class="paraProp mb-4">
+                Money Gyaan, a website started by Santanu Debnath, educates
+                people about insurance, financial life, money, and investment.
+                It gives guidance to people on how to handle money or
+                money-related issues. The portal provides tips, guides, and
+                strategies with the intention to guide people to handle personal
+                finance that includes money, financial life, insurance, and
+                investment.MoneyTap, essentially is a fintech lending company
+                that offers quick personal loans in India. Shiv Nanda, a
+                financial analyst, writes blogs for MoneyTap where he helps
+                people understand the basics of financial planning, shares tips
+                on money-saving, and offers ideas to break bad money habits to
+                help you get on a path of financial success.
+              </p>
+              <a
+                href="MoneyGyaan.html"
+                target="_self"
+                class="text-blue-500 font-medium hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </div>
+            <div class="wcu-card p-3 mb-3 text-left">
+              <h1 class="text-2xl font-bold mt-3">Money Control</h1>
+              <p class="paraProp mb-4">
+                Through Money Excel, Shitanshu educates Indian consumers on the
+                importance of financial planning and helps them excel in
+                managing various financial products that involve personal
+                finan1MoneyTap, essentially is a fintech lending company that
+                offers quick personal loans in India. Shiv Nanda, a financial
+                analyst, writes blogs for MoneyTap where he helps people
+                understand the basics of financial planning, shares tips on
+                money-saving, and offers ideas to break bad money habits to help
+                you get on a path of financial success.
+              </p>
+              <a
+                href="MoneyControl.html"
+                target="_self"
+                class="text-blue-500 font-medium hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="lineProp m-5" />
+      </div>
+
+      <div class="container mx-auto px-6" id="sectionFAQ">
+        <h1 class="faqs-us-section-heading text-left mb-6 ml-2">
+          Frequently Asked Questions
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <button
+              class="wcu-card-title hover:underline focus:outline-none"
+              onclick="toggleAnswer(1)"
+            >
+              How do I create an account?
+            </button>
+            <p id="answer1" class="text-gray-700 mt-2 hidden">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vehicula libero ac mi efficitur, nec condimentum odio facilisis.
+            </p>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <button
+              class="wcu-card-title hover:underline focus:outline-none"
+              onclick="toggleAnswer(2)"
+            >
+              What payment methods do you accept?
+            </button>
+            <p id="answer2" class="text-gray-700 mt-2 hidden">
+              We accept credit cards, PayPal, and other common online payment
+              methods.
+            </p>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <button
+              class="wcu-card-title hover:underline focus:outline-none"
+              onclick="toggleAnswer(3)"
+            >
+              How can I reset my password?
+            </button>
+            <p id="answer3" class="text-gray-700 mt-2 hidden">
+              If you've forgotten your password, you can request a password
+              reset via the "Forgot Password" link on the login page.
+            </p>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <button
+              class="wcu-card-title hover:underline focus:outline-none"
+              onclick="toggleAnswer(4)"
+            >
+              Do you offer refunds?
+            </button>
+            <p id="answer4" class="text-gray-700 mt-2 hidden">
+              Yes, we offer refunds for certain products within 30 days of
+              purchase. Please contact our support team for assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+      <script>
+        function toggleAnswer(id) {
+          const answer = document.getElementById(`answer${id}`);
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+        }
+      </script>
+      <hr class="lineProp m-5 mt-10" />
+
+      <div class="footer-section py-5 flex flex-col" id="followUsSection">
+        <div class="follow-us-section py-5">
+          <div class="container mx-auto">
+            <div class="text-left">
+              <h1 class="follow-us-section-heading text-3xl font-bold">
+                Follow Us
+              </h1>
+            </div>
+            <div class="flex justify-center">
+              <div class="follow-us-icon-container text-2xl mr-6">
+                <i class="fab fa-twitter icon"></i>
+              </div>
+              <div class="follow-us-icon-container text-2xl mr-6">
+                <i class="fab fa-instagram icon"></i>
+              </div>
+              <div class="follow-us-icon-container text-2xl">
+                <i class="fab fa-facebook icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto text-center flex flex-col items-center">
+          <h1 class="footer-section-mail-id text-2xl">
+            financialblog@blog.com
+          </h1>
+          <p class="footer-section-address text-xl">
+            123 Ayur Vigyan Nagar, New Delhi, India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

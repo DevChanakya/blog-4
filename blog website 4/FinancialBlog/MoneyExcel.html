@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="bg-gray-900">
+      <nav class="bg-transparent">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                        Icon when menu is closed.
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+                        Icon when menu is open.
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company"
+                />
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover-bg-gray-700 hover-text-white" -->
+                  <a
+                    href="index.html"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="index.html#sectionhome"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Blogs</a
+                  >
+                  <a
+                    href="index.html#sectionFAQ"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >FAQs</a
+                  >
+                  <a
+                    href="index.html#followUsSection"
+                    class="text-gray-300 hover-bg-gray-700 hover-text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Follow Us</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <button
+                type="button"
+                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover-text-white focus:outline-none focus-ring-2 focus-ring-white focus-ring-offset-2 focus-ring-offset-gray-800"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover-bg-gray-700 hover-text-white" -->
+            <a
+              href="index.html"
+              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              href="index.html#sectionhome"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Blogs</a
+            >
+            <a
+              href="index.html#sectionFAQ"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >FAQs</a
+            >
+            <a
+              href="#followUsSection"
+              class="text-gray-300 hover-bg-gray-700 hover-text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Follow Us</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="custom-margin"><h1 class="p-5 text-center text-white font-bold text-3xl">Money Excel</h1>
+        <p class="px-5 text-gray-400 text-sm text-center">
+          Money Excel is a financial and investment-focused website and platform
+          dedicated to providing a wealth of information and resources to help
+          individuals make informed decisions about their personal finances. With
+          a primary focus on financial planning, investments, insurance, taxation,
+          and other money-related topics.
+        </p>
+        <img
+          class="p-5"
+          src="https://media.istockphoto.com/id/1663047673/photo/growth-money-graph-digital-wallet-bank-payment-cash-coin-3d-background-of-banking-finance.jpg?s=2048x2048&w=is&k=20&c=du3YdtOCcZkL1n3DfXvQFV7QvCpM5Us-CG1_UcnL19E="
+          alt="img"
+        />
+        <p class="p-5 text-white py-4">
+          Money Excel offers a vast array of articles, guides, and tools to assist
+          users in managing their finances effectively. The platform covers topics
+          such as budgeting, saving, investing in stocks and mutual funds, tax
+          planning, and retirement planning. They also delve into insurance and
+          provide in-depth reviews and analyses of financial products. The site is
+          a valuable resource for individuals looking to improve their financial
+          literacy, make informed investment choices, and develop comprehensive
+          financial plans tailored to their unique circumstances. With its
+          detailed articles, calculators, and expert insights, Money Excel serves
+          as a one-stop destination for financial education and guidance. Whether
+          you are a novice looking to establish a budget or a seasoned investor
+          seeking to optimize your portfolio, Money Excel provides accessible,
+          informative content that empowers users to take control of their
+          financial well-being and work toward a more secure and prosperous
+          future.
+        </p>
+  
+        <p class="p-5 text-white">
+          Money Excel has also established a strong online community of
+          individuals seeking financial advice and sharing their experiences. The
+          website's forums and social media presence enable users to engage in
+          discussions, seek advice from experts and peers, and stay updated on the
+          latest financial trends and news. This community aspect fosters a
+          collaborative environment where users can learn from one another's
+          successes and challenges, making it a supportive platform for anyone on
+          their financial journey. Whether you're aiming to build an emergency
+          fund, invest wisely, or plan for retirement, Money Excel's extensive
+          content and interactive features make it a valuable resource for
+          individuals looking to enhance their financial literacy and secure their
+          financial future.
+        </p></div>
+      <hr class="lineProp m-5 mt-10 bg-white" />
+
+      <div
+        class="bg-gray-900 footer-section py-5 flex flex-col"
+        id="followUsSection"
+      >
+        <div class="follow-us-section py-5">
+          <div class="container mx-auto">
+            <div class="text-left">
+              <h1 class="follow-us-section-heading text-3xl font-bold">
+                Follow Us
+              </h1>
+            </div>
+            <div class="flex justify-center">
+              <div class="follow-us-icon-container text-2xl mr-6">
+                <i class="fab fa-twitter icon"></i>
+              </div>
+              <div class="follow-us-icon-container text-2xl mr-6">
+                <i class="fab fa-instagram icon"></i>
+              </div>
+              <div class="follow-us-icon-container text-2xl">
+                <i class="fab fa-facebook icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto text-center flex flex-col items-center">
+          <h1 class="footer-section-mail-id text-2xl">
+            financialblog@blog.com
+          </h1>
+          <p class="footer-section-address text-xl">
+            123 Ayur Vigyan Nagar, New Delhi, India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
